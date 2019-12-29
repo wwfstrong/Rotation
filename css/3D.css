@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  perspective: 2000px;
+  overflow: hidden;
+  user-select: none;
+  outline: none;
+  background-color: gray;
+}
+#box {
+  width: 500px;
+  height: 400px;
+  margin: 100px auto;
+  position: relative;
+}
+#screen {
+  position: relative;
+  top: 50px;
+  left: 100px;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: all 0.3s linear;
+}
+ul {
+  list-style-type: none;
+  width: 1800px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+ul li {
+  position: absolute;
+}
+#left-btn,
+#right-btn {
+  position: absolute;
+  top: 166px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 4px solid #409b4e;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+#left-btn {
+  left: -50px;
+}
+#right-btn {
+  right: -50px;
+}
+#left-btn::after,
+#right-btn::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  width: 30px;
+  height: 30px;
+  border-top: 6px solid #87ceeb;
+  border-left: 6px solid #87ceeb;
+  border-top-left-radius: 5px;
+}
+#left-btn::after {
+  left: 18px;
+  transform: rotate(-45deg);
+}
+#right-btn::after {
+  left: 8px;
+  transform: rotate(135deg);
+}
+ol {
+  position: absolute;
+  top: 110%;
+  left: 85px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+ol li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 30px;
+  background-color: #f5eedc;
+  cursor: pointer;
+}
+.current {
+  background-color: #fcc637;
+}
+ul li:nth-child(1) {
+  transform: rotateY(0deg) translateZ(149px);
+}
+ul li:nth-child(2) {
+  transform: rotateY(90deg) translateZ(149px);
+}
+ul li:nth-child(3) {
+  transform: rotateY(180deg) translateZ(149px);
+}
+ul li:nth-child(4) {
+  transform: rotateY(270deg) translateZ(149px);
+}
+ul li:nth-child(5) {
+  transform: rotateX(90deg) translateZ(149px);
+}
+ul li:nth-child(6) {
+  transform: rotateX(-90deg) translateZ(149px);
+}
+button {
+  width: 125px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #3685be;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  border: none;
+  top: 130%;
+  left: 0px;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+.change {
+  background-color: #409b4e;
+}
+#second {
+  left: 180px;
+}
+#third {
+  left: 360px;
+}
